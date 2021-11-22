@@ -1,0 +1,31 @@
+.section-one {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1637516408720-c7d7fd09a16e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-one h1 {
+    line-height: 70px;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.705);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+.section-two {
+    background-color: rgb(75, 70, 0);
+    padding-top: 40px;
+}
+
+.section-two h2 {
+    color: rgba(255, 255, 255, 0.699);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
