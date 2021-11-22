@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './navbar.module.css';
 
 const Navbar = props => {
-    return <nav className={styles.navbar}>
+    const [isScrolled, setIsScrolled] = useState(false)
+    const navbarScrollHandler = () => {
+        console.log('scrolled')
+        if (window.scrollY > 0) {
+            setIsScrolled((prevState) => {
+                return !prevState
+            })
+        }
+    }
+
+    const navbarClasses = `${styles.navbar} ${isScrolled && styles['sticky-nav']}`;
+
+    return <nav className={navbarClasses} onScroll={navbarScrollHandler}>
         <div className={styles.logo} >
             <span>Responsive</span>
         </div>
-        <div className={styles.button}>
+        <div className={styles.buttonFirst}>
             <i class='bx bx-exit' ></i>
         </div>
         <ul className={styles.list}>
@@ -16,7 +28,7 @@ const Navbar = props => {
             <li><a href='#' >Pricing</a></li>
             <li><a href='#' >Contact</a></li>
         </ul>
-        <div className={styles.button}>
+        <div className={styles.buttonSecond}>
             <i class='bx bx-menu'></i>
         </div>
     </nav>

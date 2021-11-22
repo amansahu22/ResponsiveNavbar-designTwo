@@ -5,10 +5,30 @@
     z-index: 500;
     justify-content: space-between;
     align-items: center;
+    color: white;
+}
+
+.navbar.sticky-nav {
+    background-color: aliceblue;
+}
+
+.navbar .logo {
+    margin-left: 30px;
+}
+
+.logo span {
+    line-height: 60px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .navbar .list {
     display: flex;
+    margin-right: 40px;
+    transition: all 0.45s ease;
 }
 
 .list li {
@@ -17,9 +37,57 @@
 
 .list li a {
     margin-left: 30px;
-    background-color: black;
+    font-size: 17px;
     text-decoration: none;
     color: white;
     border-radius: 20px;
     padding: 2px 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.list li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.buttonFirst {
+    line-height: 30px;
+    display: none;
+    font-size: 25px;
+}
+
+.buttonSecond {
+    line-height: 40px;
+    display: none;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.buttonSecond i {
+    cursor: pointer;
+}
+
+.buttonFirst i {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+    .navbar .list {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .navbar .list {
+        display: none;
+    }
+
+    .buttonFirst {
+        display: inline-block;
+    }
+
+    .buttonSecond {
+        display: inline-block;
+    }
 }
