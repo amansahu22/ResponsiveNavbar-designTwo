@@ -1,16 +1,12 @@
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route
-// } from "react-router-dom";
-import ExperiencePage from "./Components/UserExperience/ExperiencePage";
+import Main from "./Components/Main/main";
+import Navbar from "./Components/Navbar/navbar";
 
 function App() {
-  return <div>
-    {/* <DonorForm /> */}
-    <ExperiencePage />
-  </div>
+  return <React.Fragment>
+    <Navbar />
+    <Main />
+  </React.Fragment>
 }
 
 export default App;
